@@ -1,0 +1,100 @@
+.auth-container {
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+.auth-card {
+  width: 400px;
+
+  background: rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(12px);
+
+  padding: 30px;
+
+  border-radius: 20px;
+}
+
+.auth-card h1 {
+  text-align: center;
+
+  margin-bottom: 20px;
+}
+
+.auth-card form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.auth-card input {
+  padding: 12px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  outline: none;
+}
+
+.auth-card button {
+  padding: 12px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-weight: bold;
+}
+
+.auth-link {
+  text-align: center;
+
+  margin-top: 15px;
+}
+.password-container {
+  display: flex;
+  gap: 10px;
+}
+
+.password-container input {
+  flex: 1;
+}
+
+.password-container button {
+  min-width: 80px;
+}
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-container input {
+  width: 100%;
+  padding-right: 45px;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: black;
+}
+
+.password-rules {
+  font-size: 13px;
+  text-align: left;
+  margin-top: -5px;
+}

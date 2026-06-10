@@ -1,0 +1,173 @@
+.task-card {
+  background: rgba(255, 255, 255, 0.06);
+
+  backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 18px;
+
+  padding: 20px;
+
+  margin-top: 15px;
+
+  max-width: 900px;
+
+  box-shadow:
+    0 0 15px rgba(0, 0, 0, 0.2);
+
+  transition: all 0.3s ease;
+}
+
+.task-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 0 25px rgba(168, 85, 247, 0.25);
+}
+
+.task-btn {
+  margin-top: 10px;
+  margin-right: 10px;
+
+  padding: 8px 14px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.task-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 0 15px rgba(59, 130, 246, 0.4);
+}
+
+.complete-btn {
+  background: #22c55e;
+  color: white;
+}
+
+.delete-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.task-form {
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  padding: 20px;
+
+  border-radius: 16px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+
+  width: 100%;
+
+  margin: 0;
+
+  box-shadow:
+    0 0 20px rgba(59, 130, 246, 0.15);
+}
+
+.task-form h3 {
+  margin: 0;
+  margin-bottom: 10px;
+
+  color: white;
+
+  font-size: 1.3rem;
+}
+
+.task-form input,
+.task-form textarea,
+.task-form select {
+  padding: 12px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: white;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 10px;
+
+  outline: none;
+
+  font-size: 1rem;
+}
+
+.task-form input::placeholder,
+.task-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.task-form textarea {
+  resize: none;
+
+  min-height: 80px;
+}
+
+.task-form button {
+  padding: 10px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.task-form button:hover {
+  transform: scale(1.02);
+
+  box-shadow:
+    0 0 15px rgba(59, 130, 246, 0.4);
+}
+.badge-container {
+  display: flex;
+  gap: 10px;
+
+  margin: 12px 0;
+}
+
+.badge {
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  color: white;
+
+  font-size: 0.85rem;
+
+  font-weight: 600;
+}
+
+.due-date {
+  margin-top: 10px;
+
+  color: #cbd5e1;
+}
+
+.status {
+  margin-top: 10px;
+
+  font-weight: 600;
+}
