@@ -11,13 +11,18 @@
 .auth-card {
   width: 400px;
 
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
 
   backdrop-filter: blur(12px);
 
   padding: 30px;
 
   border-radius: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 0 25px rgba(59, 130, 246, 0.15);
 }
 
 .auth-card h1 {
@@ -35,6 +40,8 @@
 }
 
 .auth-card input {
+  width: 100%;
+
   padding: 12px;
 
   border: none;
@@ -42,6 +49,16 @@
   border-radius: 10px;
 
   outline: none;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: white;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.auth-card input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .auth-card button {
@@ -54,6 +71,12 @@
   cursor: pointer;
 
   font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.auth-card button:hover {
+  transform: translateY(-2px);
 }
 
 .auth-link {
@@ -61,40 +84,57 @@
 
   margin-top: 15px;
 }
-.password-container {
-  display: flex;
-  gap: 10px;
+
+.auth-link a {
+  color: #60a5fa;
+
+  text-decoration: none;
 }
 
-.password-container input {
-  flex: 1;
+.auth-link a:hover {
+  text-decoration: underline;
 }
 
-.password-container button {
-  min-width: 80px;
-}
 .password-container {
   position: relative;
+
   width: 100%;
 }
 
 .password-container input {
   width: 100%;
+
   padding-right: 45px;
 }
 
 .eye-icon {
   position: absolute;
+
   right: 15px;
+
   top: 50%;
+
   transform: translateY(-50%);
+
   cursor: pointer;
+
   font-size: 18px;
-  color: black;
+
+  color: rgba(255, 255, 255, 0.8);
+
+  transition: 0.3s;
+}
+
+.eye-icon:hover {
+  color: white;
 }
 
 .password-rules {
   font-size: 13px;
+
   text-align: left;
+
+  color: rgba(255, 255, 255, 0.7);
+
   margin-top: -5px;
 }

@@ -1,5 +1,12 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import {
+  Link,
+  useNavigate,
+} from "react-router-dom";
+import {
+  FaEye,
+  FaEyeSlash,
+} from "react-icons/fa";
 
 import { loginUser } from "../services/authService";
 
@@ -11,6 +18,11 @@ function Login() {
 
   const [password, setPassword] =
     useState("");
+
+  const [showPassword, setShowPassword] =
+    useState(false);
+
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -26,12 +38,11 @@ function Login() {
         JSON.stringify(data)
       );
 
-      window.location.href =
-        "/dashboard";
+      navigate("/dashboard");
     } catch (error) {
       alert(
         error?.response?.data?.message ||
-        "Login Failed"
+          "Login Failed"
       );
     }
   };
@@ -51,14 +62,37 @@ function Login() {
             }
           />
 
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) =>
-              setPassword(e.target.value)
-            }
-          />
+          <div className="password-container">
+            <input
+              type={
+                showPassword
+                  ? "text"
+                  : "password"
+              }
+              placeholder="Password"
+              value={password}
+              onChange={(e) =>
+                setPassword(
+                  e.target.value
+                )
+              }
+            />
+
+            <span
+              className="eye-icon"
+              onClick={() =>
+                setShowPassword(
+                  !showPassword
+                )
+              }
+            >
+              {showPassword ? (
+                <FaEyeSlash />
+              ) : (
+                <FaEye />
+              )}
+            </span>
+          </div>
 
           <button type="submit">
             Login
@@ -66,8 +100,7 @@ function Login() {
         </form>
 
         <p className="auth-link">
-          Don't have an account?
-          {" "}
+          Don't have an account?{" "}
           <Link to="/register">
             Register
           </Link>
